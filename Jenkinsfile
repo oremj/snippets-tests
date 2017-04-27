@@ -33,16 +33,12 @@ pipeline {
   }
   post {
     failure {
-      mail(
-        body: "${BUILD_URL}",
-        from: "firefox-test-engineering@mozilla.com",
-        replyTo: "firefox-test-engineering@mozilla.com",
-        subject: "Build failed in Jenkins: ${JOB_NAME} #${BUILD_NUMBER}",
-        to: "fte-ci@mozilla.com")
+        sh "echo fail"
     }
     changed {
-      ircNotification('#snippets')
-      ircNotification('#fx-test-alerts')
+        sh "echo changed"
+      // ircNotification('#snippets')
+      // ircNotification('#fx-test-alerts')
     }
   }
 }
