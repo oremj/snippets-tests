@@ -23,6 +23,7 @@ pipeline {
       }
       post {
         always {
+            sh "echo done"
           // archiveArtifacts 'results/*'
           // junit 'results/*.xml'
 //          submitToActiveData('results/py27_raw.txt')
