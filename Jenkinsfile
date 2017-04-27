@@ -25,8 +25,8 @@ pipeline {
         always {
           archiveArtifacts 'results/*'
           junit 'results/*.xml'
-          submitToActiveData('results/py27_raw.txt')
-          submitToTreeherder('snippets-tests', 'e2e', 'End-to-end integration tests', 'results/*', 'results/py27_tbpl.txt')
+//          submitToActiveData('results/py27_raw.txt')
+//          submitToTreeherder('snippets-tests', 'e2e', 'End-to-end integration tests', 'results/*', 'results/py27_tbpl.txt')
         }
       }
     }
