@@ -1,4 +1,4 @@
-@Library('fxtest@1.6') _
+@Library('oremjtest') _
 
 pipeline {
   agent any
